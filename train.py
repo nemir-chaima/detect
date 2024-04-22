@@ -8,7 +8,7 @@ from tensorflow.keras.layers import Input, Dense, Flatten
 from tensorflow.keras.models import Model
 import streamlit as st
 
-
+print("le script est lancé ")
 
 
 df = pd.read_csv('/home/grp/FilterAI/detect/cleaned_df.csv', sep=',')
