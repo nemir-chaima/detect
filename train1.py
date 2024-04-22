@@ -1,14 +1,18 @@
 print('helllloo ')
 import pandas as pd
-
-
+print('pandas')
 from sklearn.model_selection import train_test_split
-import os
+print('sktlearn')
 import tensorflow as tf
+print('tensorflow as tf')
 from transformers import TFBertModel, BertTokenizer
+print('from transformers import TFBertModel, BertTokenizer')
 from tensorflow.keras.layers import Input, Dense, Flatten
+print('from tensorflow.keras.layers import Input, Dense, Flatten')
 from tensorflow.keras.models import Model
+print('from tensorflow.keras.models import Model')
 import streamlit as st
+print("streamlit")
 
 print("le script est lancé ")
 
