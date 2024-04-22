@@ -78,7 +78,7 @@ epochs = 20
 history = model.fit(X_train, y_train, epochs=epochs, validation_split=0.1, shuffle=True, batch_size=200)
 
 # sauvegarder le model pour le tester apres 
-save_directory = ''  # le chemin ou on peut save le model pre entrainé
+save_directory = '/home/grp/FilterAI/detect'  # le chemin ou on peut save le model pre entrainé
 os.makedirs(save_directory, exist_ok=True)
 model.save(save_directory)
 
