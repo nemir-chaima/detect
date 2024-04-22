@@ -9,28 +9,10 @@ from tensorflow.keras.models import Model
 
 
 
-import requests
-import zipfile
-import io
 
 
-# URL du fichier ZIP sur GitHub
-url = 'https://github.com/nemir-chaima/detect/blob/main/cleaned_df.csv.zip'
 
-# Télécharger le fichier ZIP
-response = requests.get(url)
-
-# Extraire le contenu du fichier ZIP en mémoire
-with zipfile.ZipFile(io.BytesIO(response.content)) as zip_ref:
-    # Supposons que votre fichier CSV se trouve dans un dossier spécifique dans l'archive ZIP
-    csv_filename = 'chemin/vers/votre_fichier.csv'
-    with zip_ref.open(csv_filename) as file:
-        # Lire le fichier CSV avec pandas
-        df = pd.read_csv(file)
-
-# charger les données que j'ai deja clean ( lemmatisation , 
-# stop word ,espaces, ponctuation , maj et min ...)
-df = pd.read_csv('/Users/chaimanemir/Downloads/cleaned_df.csv', sep=',')
+df = pd.read_csv('/home/grp/FilterAI/detect/cleaned_df.csv', sep=',')
 colonnes_labels = ['toxic', 'severe_toxic', 'obscene', 'threat', 'insult', 'identity_hate']
 
 # creer une colonne labels ( elle nest finalement pas necessaire!!!! a revoir )
