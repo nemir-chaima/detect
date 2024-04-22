@@ -6,8 +6,7 @@ import tensorflow as tf
 from transformers import TFBertModel, BertTokenizer
 from tensorflow.keras.layers import Input, Dense, Flatten
 from tensorflow.keras.models import Model
-
-
+import streamlit as st
 
 
 
@@ -64,3 +63,7 @@ save_directory = '/home/grp/FilterAI/detect'  # le chemin ou on peut save le mod
 os.makedirs(save_directory, exist_ok=True)
 model.save(save_directory)
 
+
+
+
+print( "le model est saved ")
